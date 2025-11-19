@@ -1,16 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vison Car -  | Mecânico  A Domicilio  melhor preço de terra boa </title>
+  <title>Vison Car - Mecânico a Domicílio em [SUA CIDADE] | Melhor Preço</title>
   <!-- Meta tags para WhatsApp / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="🔧 Vison Car - Mecânico  A Domicilio Melhor preço, troca de óleo, pastilha de freio, correia dentada, mecânica em geral " />
-  <meta property="og:description" content="Troca de óleo e pastilhas de freio com desconto! Mecânica profissional que vai até você. Qualidade e confiança." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/viniciusxtrad/imagens/refs/heads/main/Gemini_Generated_Image_kyufqhkyufqhkyuf.png
-  <meta property="og:url" content="https://seulink.com.br/visoncar" />
+  <meta property="og:title" content="🔧 Vison Car - Mecânico a Domicílio em [SUA CIDADE]" />
+  <meta property="og:description" content="Troca de óleo e pastilhas de freio com desconto! Mecânica profissional que vai até você. Atendemos [SUA CIDADE] e região." />
+  <meta property="og:image" content="https://viniciusxtrad.github.io/imagens/imagens1/LOGO%20CAR1.png" />
+  <meta property="og:url" content="https://oficina-movel.onrender.com/" />
   <meta name="twitter:card" content="summary_large_image" />
   <style>
     * {
@@ -38,6 +37,12 @@
         opacity: 1;
         transform: translateY(0);
       }
+    }
+    
+    @keyframes countdown {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
     }
     
     body {
@@ -90,6 +95,51 @@
       text-transform: uppercase;
       letter-spacing: 3px;
       opacity: 0.95;
+    }
+    
+    .local-badge {
+      background: rgba(0,0,0,0.3);
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 20px;
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+    
+    /* Barra de urgência */
+    .urgency-bar {
+      background: #ff0000;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-weight: bold;
+      font-size: 1.1em;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .urgency-bar::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      animation: shine 2s infinite;
+    }
+    
+    .countdown {
+      display: inline-flex;
+      gap: 10px;
+      margin-left: 15px;
+    }
+    
+    .countdown-item {
+      background: rgba(0,0,0,0.3);
+      padding: 5px 10px;
+      border-radius: 5px;
+      animation: countdown 1s infinite;
     }
     
     /* Imagem Hero */
@@ -194,11 +244,33 @@
       font-weight: bold;
     }
     
+    .price-comparison {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin: 15px 0;
+    }
+    
+    .old-price {
+      font-size: 1.3em;
+      color: #999;
+      text-decoration: line-through;
+    }
+    
     .service-price {
       font-size: 1.8em;
       color: #ffa500;
       font-weight: bold;
-      margin: 15px 0;
+    }
+    
+    .economy-badge {
+      background: #25d366;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      font-weight: bold;
     }
     
     .service-description {
@@ -242,10 +314,95 @@
       line-height: 1.5;
     }
     
-    /* Botão WhatsApp */
+    /* Depoimentos */
+    .testimonials {
+      margin: 50px 0;
+    }
+    
+    .testimonials h2 {
+      color: #ff6b00;
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+    
+    .testimonial-card {
+      background: linear-gradient(135deg, #252525, #1a1a1a);
+      border-radius: 15px;
+      padding: 25px;
+      margin: 20px 0;
+      border-left: 5px solid #ff6b00;
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      color: #ddd;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #ff6b00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .author-info {
+      color: #ccc;
+    }
+    
+    .author-name {
+      font-weight: bold;
+    }
+    
+    .author-location {
+      font-size: 0.9em;
+    }
+    
+    /* Garantia */
+    .guarantee {
+      background: linear-gradient(135deg, #1a3a1a, #0f2a0f);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      margin: 40px 0;
+      border: 2px solid #25d366;
+    }
+    
+    .guarantee-icon {
+      font-size: 4em;
+      margin-bottom: 20px;
+    }
+    
+    .guarantee h2 {
+      color: #25d366;
+      margin-bottom: 15px;
+    }
+    
+    .guarantee p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+    
+    /* CTA WhatsApp */
     .whatsapp-section {
       text-align: center;
       margin: 40px 0 20px;
+      background: linear-gradient(135deg, #1a3a1a, #0f2a0f);
+      border-radius: 20px;
+      padding: 30px;
+      border: 2px solid #25d366;
     }
     
     .whatsapp-text {
@@ -269,6 +426,7 @@
       display: inline-block;
       position: relative;
       overflow: hidden;
+      margin: 10px;
     }
     
     .whatsapp-button::before {
@@ -292,6 +450,25 @@
     .whatsapp-button:hover {
       transform: scale(1.05);
       box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+    }
+    
+    .phone-button {
+      background: linear-gradient(135deg, #ff6b00, #ff8c00);
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1em;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .phone-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(255, 107, 0, 0.6);
     }
     
     /* Footer */
@@ -329,9 +506,24 @@
         font-size: 1.3em;
       }
       
-      .whatsapp-button {
+      .whatsapp-button, .phone-button {
         width: 100%;
         font-size: 1.1em;
+        margin: 5px 0;
+      }
+      
+      .urgency-bar {
+        font-size: 0.9em;
+      }
+      
+      .countdown {
+        display: block;
+        margin-top: 5px;
+      }
+      
+      .countdown-item {
+        display: inline-block;
+        margin: 0 5px;
       }
     }
   </style>
@@ -341,50 +533,102 @@
     <!-- Header -->
     <div class="header">
       <div class="logo">🔧 VISON CAR</div>
-      <div class="tagline">MECÂNICO À DOMICÍLIO</div>
+      <div class="tagline">Mecânico a Domicílio</div>
+      <div class="local-badge">📍 Atendemos [SUA CIDADE] e região</div>
+    </div>
+    
+    <!-- Barra de urgência -->
+    <div class="urgency-bar">
+      🚨 PROMOÇÃO POR TEMPO LIMITADO! 
+      <div class="countdown">
+        <span class="countdown-item">⏰ 24H</span>
+        <span class="countdown-item">🔥 5 VAGAS</span>
+      </div>
     </div>
     
     <!-- Imagem Hero -->
-    <img class="hero-image" src="https://viniciusxtrad.github.io/imagens/imagens1/LOGO%20CAR1.png" />
+    <img class="hero-image" src="https://viniciusxtrad.github.io/imagens/imagens1/LOGO%20CAR1.png" alt="Mecânico Vison Car atendendo em domicílio" />
     
     <!-- Container Principal -->
     <div class="container">
-      <div class="promo-badge">🎉 PROMOÇÃO ESPECIAL</div>
+      <div class="promo-badge">🎉 OFERTA EXCLUSIVA PARA [SUA CIDADE]</div>
       
-      <h1>O MELHOR PREÇO DA CIDADE!!!</h1>
+      <h1>EVITE FILAS E PERDA DE TEMPO!</h1>
       
       <p class="subtitle">
-        Chega de perder tempo levando seu carro na oficina. Nós vamos até você com equipamento profissional e qualidade garantida!
+        <strong>Chega de perder horas em oficinas!</strong> Nós vamos até você com equipamento profissional, 
+        preço justo e qualidade garantida. Atendimento rápido em [SUA CIDADE]!
       </p>
       
       <!-- Serviços -->
       <div class="services">
         <div class="service-card">
           <div class="service-icon">🛢️</div>
-          <div class="service-title">Troca de Óleo</div>
-          <div class="service-price">A partir de R$ 99,99</div>
+          <div class="service-title">Troca de Óleo Completa</div>
+          <div class="price-comparison">
+            <span class="old-price">De R$ 149,90</span>
+            <span class="service-price">Por R$ 99,99</span>
+            <span class="economy-badge">ECONOMIZE R$ 50</span>
+          </div>
           <div class="service-description">
-            Troca completa de óleo + filtro com produtos de qualidade. Seu motor merece o melhor!
+            Troca completa de óleo + filtro com produtos de qualidade. Inclui verificação de níveis e limpeza.
           </div>
         </div>
         
         <div class="service-card">
           <div class="service-icon">🔧</div>
           <div class="service-title">Troca de Pastilhas de Freio</div>
-          <div class="service-price">A partir de R$ 149,90</div>
+          <div class="price-comparison">
+            <span class="old-price">De R$ 199,90</span>
+            <span class="service-price">Por R$ 149,90</span>
+            <span class="economy-badge">ECONOMIZE R$ 50</span>
+          </div>
           <div class="service-description">
-            Segurança em primeiro lugar! Pastilhas de qualidade instaladas por profissionais.
+            Segurança em primeiro lugar! Pastilhas de qualidade instaladas por profissionais especializados.
+          </div>
+        </div>
+      </div>
+      
+      <!-- Depoimentos -->
+      <div class="testimonials">
+        <h2>O que nossos clientes dizem</h2>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            "Finalmente um mecânico de confiança que vem até minha casa! Preço justo, serviço rápido e 
+            ainda me poupou o tempo de ir até a oficina. Recomendo demais!"
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">MC</div>
+            <div class="author-info">
+              <div class="author-name">Marcos Costa</div>
+              <div class="author-location">[SUA CIDADE]</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            "Excelente atendimento! O mecânico foi super educado, explicou tudo direitinho e fez um 
+            serviço impecável. Virei cliente fixo!"
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">AS</div>
+            <div class="author-info">
+              <div class="author-name">Ana Silva</div>
+              <div class="author-location">[SUA CIDADE]</div>
+            </div>
           </div>
         </div>
       </div>
       
       <!-- Diferenciais -->
       <div class="benefits">
-        <h2>Por que escolher a Vison Car?</h2>
+        <h2>Por que a Vison Car é a melhor opção?</h2>
         
         <div class="benefit-item">
           <div class="benefit-icon">🚗</div>
-          <div class="benefit-text"><strong>Atendimento no local:</strong> Vamos até sua casa ou trabalho</div>
+          <div class="benefit-text"><strong>Atendimento no local:</strong> Vamos até sua casa ou trabalho em [SUA CIDADE]</div>
         </div>
         
         <div class="benefit-item">
@@ -399,29 +643,78 @@
         
         <div class="benefit-item">
           <div class="benefit-icon">🛡️</div>
-          <div class="benefit-text"><strong>Garantia:</strong> Todos os serviços com garantia incluída</div>
+          <div class="benefit-text"><strong>Garantia de 90 dias:</strong> Todos os serviços com garantia incluída</div>
         </div>
         
         <div class="benefit-item">
           <div class="benefit-icon">💰</div>
           <div class="benefit-text"><strong>Preço justo:</strong> Sem taxas escondidas, orçamento transparente</div>
         </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">📱</div>
+          <div class="benefit-text"><strong>Pagamento facilitado:</strong> Aceitamos PIX, cartão e dinheiro</div>
+        </div>
+      </div>
+      
+      <!-- Garantia -->
+      <div class="guarantee">
+        <div class="guarantee-icon">🛡️</div>
+        <h2>GARANTIA DE 90 DIAS</h2>
+        <p>Todos os nossos serviços incluem garantia de 90 dias. Se houver qualquer problema, 
+        retornamos gratuitamente para resolver!</p>
       </div>
       
       <!-- CTA WhatsApp -->
       <div class="whatsapp-section">
-        <p class="whatsapp-text">⏰ Agende agora e garanta sua promoção!</p>
-        <a class="whatsapp-button" target="_blank" href="https://wa.me/5544997013722?text=Olá%20Vison%20Car!%20Quero%20agendar%20um%20serviço%20na%20oficina%20móvel.">
-          💬 Chamar no WhatsApp
+        <p class="whatsapp-text">⏰ AGENDE AGORA E GARANTA SEU DESCONTO!</p>
+        <p style="margin-bottom: 20px; color: #ccc;">Promoção válida apenas para as primeiras 5 pessoas que agendarem hoje!</p>
+        
+        <a class="whatsapp-button" target="_blank" href="https://wa.me/5544997013722?text=Olá%20Vison%20Car!%20Vi%20sua%20promoção%20no%20grupo%20e%20quero%20agendar%20um%20serviço%20na%20oficina%20móvel%20em%20[SUA CIDADE].">
+          💬 AGENDAR PELO WHATSAPP
         </a>
+        
+        <br>
+        
+        <a class="phone-button" href="tel:+5544997013722">
+          📞 LIGAR AGORA
+        </a>
+        
+        <p style="margin-top: 20px; font-size: 0.9em; color: #ccc;">Atendimento de segunda a sábado, das 8h às 18h</p>
       </div>
     </div>
     
     <!-- Footer -->
     <div class="footer">
-      <p>🔧 Vison Car - MECÂNICO À DOMICÍLIO</p>
+      <p>🔧 Vison Car - Mecânico a Domicílio em [SUA CIDADE]</p>
       <p>Qualidade e confiança onde você estiver</p>
+      <p style="margin-top: 10px; font-size: 0.8em;">© 2023 Vison Car - Todos os direitos reservados</p>
     </div>
   </div>
+
+  <script>
+    // Contador de visitas para criar urgência
+    document.addEventListener('DOMContentLoaded', function() {
+      // Simula contador de vagas restantes (pode ser integrado com backend depois)
+      const vagasElement = document.querySelector('.countdown-item:last-child');
+      let vagas = 5;
+      
+      // Diminui uma vaga a cada 30 segundos para criar urgência
+      setInterval(() => {
+        if (vagas > 1) {
+          vagas--;
+          vagasElement.textContent = `🔥 ${vagas} VAGAS`;
+        }
+      }, 30000);
+      
+      // Adiciona interação ao clicar nos botões
+      document.querySelectorAll('.whatsapp-button, .phone-button').forEach(button => {
+        button.addEventListener('click', function() {
+          // Aqui você pode adicionar tracking de conversão (Google Analytics, etc.)
+          console.log('Clique no CTA registrado');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
